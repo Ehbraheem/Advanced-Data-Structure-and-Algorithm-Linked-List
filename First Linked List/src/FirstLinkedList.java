@@ -3,7 +3,16 @@
  */
 public class FirstLinkedList {
     public static void main (String[] args) {
+        LinkedList list = new LinkedList();
 
+        list.insertFront( 21);
+        list.insertFront( 32);
+        list.insertFront( 43);
+        list.insertFront( 78);
+        list.insertFront( 90);
+
+        System.out.println(list);
+        list.firstNode();
     }
 }
 
@@ -13,6 +22,14 @@ class LinkedList {
 
     public LinkedList() {
         this.top = null;
+    }
+
+    public void insertFront(int data) {
+        this.top = new Node(data, this.top);
+    }
+
+    public void firstNode() {
+        System.out.println(this.top.getData());
     }
 }
 
