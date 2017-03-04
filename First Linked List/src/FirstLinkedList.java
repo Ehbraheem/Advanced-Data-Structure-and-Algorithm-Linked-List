@@ -20,7 +20,7 @@ public class FirstLinkedList {
 
         list.printNode();
 
-//        System.out.println(list);
+        System.out.println(list.size);
 //        list.firstNode();
     }
 }
@@ -29,12 +29,15 @@ class LinkedList {
 
     private Node top;
 
+    public int size;
+
     public LinkedList() {
         this.top = null;
     }
 
     public void insertFront(int data) {
         this.top = new Node(data, this.top);
+        this.size++;
     }
 
     public void firstNode() {
@@ -57,7 +60,12 @@ class LinkedList {
             } else {
                 this.top = current.getNext();
             }
+            size--;
         }
+    }
+
+    public int getSize() {
+        return this.size;
     }
 
     public void printNode() {
