@@ -12,8 +12,10 @@ public class FirstLinkedList {
         list.insertFront( 90);
 
         list.printNode();
+        System.out.println(list.searchNode(32));
         System.out.println("\n");
         list.deleteNode(21);
+        System.out.println(list.searchNode(21));
 
 
         list.printNode();
@@ -66,6 +68,18 @@ class LinkedList {
             System.out.print(current.getData() + " ");
             current = current.getNext();
         }
+    }
+
+    public boolean searchNode(int data) {
+        boolean flag = false;
+        Node current = this.top;
+        while ((current != null) ) {
+            if (current.getData() == data) {
+                return true;
+            }
+            current = current.getNext();
+        }
+        return flag;
     }
 }
 
