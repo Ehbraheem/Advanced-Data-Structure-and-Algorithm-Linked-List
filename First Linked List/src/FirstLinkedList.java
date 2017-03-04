@@ -11,8 +11,15 @@ public class FirstLinkedList {
         list.insertFront( 78);
         list.insertFront( 90);
 
-        System.out.println(list);
-        list.firstNode();
+        list.printNode();
+        System.out.println("\n");
+        list.deleteNode(21);
+
+
+        list.printNode();
+
+//        System.out.println(list);
+//        list.firstNode();
     }
 }
 
@@ -30,6 +37,35 @@ class LinkedList {
 
     public void firstNode() {
         System.out.println(this.top.getData());
+    }
+
+    public void deleteNode(int data) {
+        Node previous = null;
+        Node current = this.top;
+
+        while ((current != null) && (current.getData() != data)) {
+            previous = current;
+            current = current.getNext();
+        }
+
+        if (current != null) {
+            if (previous != null) {
+                // delete the middle node
+                previous.setNext(current.getNext());
+            } else {
+                this.top = current.getNext();
+            }
+        }
+    }
+
+    public void printNode() {
+        Node current = this.top;
+//        int result;
+
+        while(current != null) {
+            System.out.print(current.getData() + " ");
+            current = current.getNext();
+        }
     }
 }
 
