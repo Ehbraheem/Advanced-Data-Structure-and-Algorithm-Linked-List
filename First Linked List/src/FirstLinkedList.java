@@ -21,6 +21,8 @@ public class FirstLinkedList {
         list.printNode();
 
         System.out.println(list.size);
+        System.out.println(list.isEmpty());
+        System.out.println(list.isFull());
 //        list.firstNode();
     }
 }
@@ -88,6 +90,15 @@ class LinkedList {
             current = current.getNext();
         }
         return flag;
+    }
+
+    public boolean isEmpty () {
+        return this.top == null;
+    }
+
+    public boolean isFull () {
+        return this.top != null;
+//        return !this.isEmpty();
     }
 }
 
