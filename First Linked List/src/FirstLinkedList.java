@@ -1,5 +1,5 @@
 /**
- * Created by prof.BOLA on 3/3/2017.
+ * Created by Ehbraheem on 3/3/2017.
  */
 public class FirstLinkedList {
     public static void main (String[] args) {
@@ -101,7 +101,6 @@ class LinkedList {
 //        return !this.isEmpty();
     }
 }
-
 
 class Node {
 
