@@ -57,7 +57,7 @@ class Node {
         this.prev = prev;
     }
 
-    public void displyLink() {
+    public void displayLink() {
         System.out.println(data + " ");
     }
 }
@@ -102,13 +102,17 @@ class LinkedList {
         return first == null;
     }
 
+    public boolean isFull() {
+        return first != null;
+    }
+
     public void displayForward() {
         System.out.println("Display Forward: ");
 
         Node curr = first;
 
         while (curr != null) {
-            curr.displyLink();
+            curr.displayLink();
             curr = curr.getNext();
         }
         System.out.println("");
@@ -120,7 +124,7 @@ class LinkedList {
         Node curr = last;
 
         while (curr != null) {
-            curr.displyLink();
+            curr.displayLink();
             curr = curr.getPrev();
         }
         System.out.println("");
