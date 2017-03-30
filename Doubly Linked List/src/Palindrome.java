@@ -1,7 +1,7 @@
 import jdk.nashorn.internal.ir.annotations.Ignore;
 
 /**
- * Created by prof.BOLA on 3/26/2017.
+ * Created by Ehbraheem on 3/26/2017.
  */
 public class Palindrome {
 
